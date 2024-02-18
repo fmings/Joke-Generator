@@ -8,12 +8,13 @@ import renderToDom from '../utils/renderToDom';
 
 const init = () => {
   document.querySelector('#app').innerHTML = `
-    <h1>HELLO! Welcome to the Joke Generator!</h1>
+    <div id="generator-block"><img src="https://i.imgur.com/A3AgnmB.png" alt="joke generator graphic" width="500px">
     <div id="joke-container">
     <div id="joke"></div>
     <div id="punchline"></div>
     <div id="btn-container">
-    <button class="btn btn-danger" id="joke-btn">Get a Joke</button><br />
+    <button class="btn btn-danger" id="joke-btn">GET A JOKE</button><br />
+    </div>
     </div>
     </div>
     <hr />
@@ -23,7 +24,7 @@ const init = () => {
     .querySelector('#joke-container')
     .addEventListener('click', (e) => {
       if (e.target.id.includes('joke-btn')) {
-        renderToDom('#btn-container', '<button class="btn btn-danger" id="punchline-btn">Get Punchline</button><br />');
+        renderToDom('#btn-container', '<button class="btn btn-danger" id="punchline-btn">GET PUNCHLINE</button><br />');
         getAJoke().then((response) => {
           showJoke(response);
           showPunchline(response);
@@ -32,7 +33,7 @@ const init = () => {
       }
       if (e.target.id.includes('punchline-btn')) {
         document.querySelector('#punchline').style.display = 'block';
-        renderToDom('#btn-container', '<button class="btn btn-danger" id="joke-btn">Get Another Joke</button><br />');
+        renderToDom('#btn-container', '<button class="btn btn-danger" id="joke-btn">GET A NEW JOKE</button><br />');
       }
     });
 

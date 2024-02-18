@@ -3,8 +3,44 @@
 
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: black;
+  color: white;
   text-align: center;
   margin-top: 100px;
+  text-transform: uppercase;
+}
+
+#generator-block {
+  background-color: rgb(83, 82, 82);
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  border: none;
+  width: 350px;
+  font-size: 30px;
+  font-style: bold;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+.btn:active {
+  background-color: rgb(5, 200, 244) !important;
+}
+
+.btn::selection {
+  background-color: rgb(5, 200, 244);
+}
+
+img {
+  margin-bottom: 100px;
 }
