@@ -1,4 +1,4 @@
-const endpoint = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&type=twopart';
+const endpoint = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart';
 
 const getAJoke = () => new Promise((resolve, reject) => {
   fetch(endpoint, {
